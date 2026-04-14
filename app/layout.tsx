@@ -6,14 +6,13 @@ import { getCart } from 'lib/shopify';
 import { ReactNode } from 'react';
 import { Toaster } from 'sonner';
 import './globals.css';
-import { baseUrl } from 'lib/utils';
 
-const { SITE_NAME } = process.env;
+const SITE_NAME = process.env.SITE_NAME || 'Next.js Commerce Demo';
 
 export const metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL('https://emretetik0.github.io/nextjs-commerce'),
   title: {
-    default: SITE_NAME!,
+    default: SITE_NAME,
     template: `%s | ${SITE_NAME}`
   },
   robots: {
