@@ -1,10 +1,7 @@
-export default {
-  experimental: {
-    ppr: true,
-    inlineCss: true,
-    useCache: true
-  },
+const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -15,3 +12,5 @@ export default {
     ]
   }
 };
+
+export default nextConfig;
